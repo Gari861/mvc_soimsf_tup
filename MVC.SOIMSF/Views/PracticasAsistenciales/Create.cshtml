@@ -1,0 +1,57 @@
+﻿@model MVC.SOIMSF.Models.PracticasAsistencialesViewModel
+
+@{
+    ViewData["Title"] = "Crear Práctica Asistencial";
+}
+
+<h1>Crear Práctica Asistencial</h1>
+<p class="text-muted">Los campos marcados con <span class="text-danger">*</span> son obligatorios.</p>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="IdTipo" class="control-label">Tipo de Práctica</label><span class="text-danger">*</span>
+        <select asp-for="IdTipo" class="form-control" asp-items="ViewBag.IdTipoDePractica"></select>
+        <span asp-validation-for="IdTipo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IdAfiliado" class="control-label">Afiliado</label><span class="text-danger">*</span>
+        <select asp-for="IdAfiliado" class="form-control" asp-items="ViewBag.IdAfiliado"></select>
+        <span asp-validation-for="IdAfiliado" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IdTipoDeBeneficiario" class="control-label">Tipo de Beneficiario</label><span class="text-danger">*</span>
+        <select asp-for="IdTipoDeBeneficiario" class="form-control" asp-items="ViewBag.IdTipoDeBeneficiario"></select>
+        <span asp-validation-for="IdTipoDeBeneficiario" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IdEstadoDePractica" class="control-label">Estado de Práctica</label><span class="text-danger">*</span>
+        <select asp-for="IdEstadoDePractica" class="form-control" asp-items="ViewBag.IdEstadoPractica"></select>
+        <span asp-validation-for="IdEstadoDePractica" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Precio" class="control-label">Precio</label><span class="text-danger">*</span>
+        <input asp-for="Precio" class="form-control" />
+        <span asp-validation-for="Precio" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Fecha" class="control-label">Fecha</label><span class="text-danger">*</span>
+        <input asp-for="Fecha" class="form-control" type="date" />
+        <span asp-validation-for="Fecha" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Observacion" class="control-label">Observación</label>
+        <textarea asp-for="Observacion" class="form-control"></textarea>
+        <span asp-validation-for="Observacion" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-success">Crear</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </div>
+</form>

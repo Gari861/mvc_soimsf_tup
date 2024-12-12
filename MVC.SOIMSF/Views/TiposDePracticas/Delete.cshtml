@@ -1,0 +1,30 @@
+﻿@model MVC.SOIMSF.Models.TiposDePracticasViewModel
+
+@{
+    ViewData["Title"] = "Eliminar Tipo de práctica";
+}
+
+<h1>Eliminar Tipo de práctica</h1>
+
+<hr />
+<div>
+    <h4>¿Estás seguro de que deseas eliminar este Tipo de práctica?</h4>
+    <div>
+        <dl class="row">
+            <dt class="col-sm-2">Id</dt>
+            <dd class="col-sm-10">@Model.Id</dd>
+
+            <dt class="col-sm-2">Nombre</dt>
+            <dd class="col-sm-10">@Model.Nombre</dd>        
+            
+            <dt class="col-sm-2">Descripción</dt>
+            <dd class="col-sm-10">@Model.Descripcion</dd>
+        </dl>
+    </div>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

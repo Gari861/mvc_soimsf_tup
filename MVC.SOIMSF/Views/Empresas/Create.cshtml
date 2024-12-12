@@ -1,0 +1,52 @@
+﻿@model MVC.SOIMSF.Models.EmpresasViewModel
+
+@{
+    ViewData["Title"] = "Crear Empresa";
+}
+
+<h1>Crear Empresa</h1>
+<p class="text-muted">Los campos marcados con <span class="text-danger">*</span> son obligatorios.</p>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Nombre" class="control-label"></label><span class="text-danger">*</span>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Direccion" class="control-label"></label><span class="text-danger">*</span>
+        <input asp-for="Direccion" class="form-control" />
+        <span asp-validation-for="Direccion" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Telefono" class="control-label"></label><span class="text-danger">*</span>
+        <input asp-for="Telefono" class="form-control" />
+        <span asp-validation-for="Telefono" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label><span class="text-danger">*</span>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Cuit" class="control-label"></label><span class="text-danger">*</span>
+        <input asp-for="Cuit" class="form-control" />
+        <span asp-validation-for="Cuit" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-2">
+        <label asp-for="IdLocalidad" class="control-label"></label>
+        <select asp-for="IdLocalidad" class="form-control" asp-items="ViewBag.IdLocalidad">
+        </select>
+        <span asp-validation-for="IdLocalidad" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-success">Crear</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </div>
+</form>

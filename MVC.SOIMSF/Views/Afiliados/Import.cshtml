@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Importar Afiliados";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-primary text-white text-center">
+            <h2 class="mb-0" style="font-family: 'Segoe UI', sans-serif;">
+                <i class="fas fa-file-excel"></i> Importar Afiliados desde Excel
+            </h2>
+        </div>
+        <div class="card-body p-5">
+            <!-- Mostrar mensajes de error o éxito -->
+            @if (ViewData["Error"] != null)
+            {
+                <div class="alert alert-danger text-center" role="alert">
+                    @ViewData["Error"]
+                </div>
+            }
+
+            <!-- Formulario para importar datos esenciales -->
+            <form asp-action="ImportarDatosEsenciales" enctype="multipart/form-data" method="post">
+                <h3 class="text-primary text-center">Importar Datos</h3>
+                <h4 class="text-secondary text-center">Seguir en Excel la siguiente estructura:</h4>
+                <table class="table table-bordered text-center">
+                    <thead class="thead-dark">
+                        <tr style="border-bottom: 10px;">
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Cuil</th>
+                            <th>Teléfono (opcional)</th>
+                            <th>Email (opcional)</th>
+                            <th>Fecha de Nacimiento (opcional)</th>
+                            <th>Dirección (opcional)</th>
+                            <th>Discapacidad (opcional)</th>
+                        </tr>
+                    </thead>
+                    <tbody style="border: 10px;">
+                        <tr>
+                            <td>Juan</td>
+                            <td>Pérez</td>
+                            <td>20-12345678-9</td>
+                            <td>3563-567899</td>
+                            <td>unmai234@gmail.com</td>
+                            <td>1990-11-20</td>
+                            <td>Calle Alguna 1254</td>
+                            <td>false/true</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="form-group mb-3">
+                    <label class="form-label font-weight-bold text-primary" for="excelEsencial">Seleccione archivo Excel</label>
+                    <input type="file" id="excelEsencial" name="excelFile" accept=".xlsx, .xls" class="form-control" />
+                </div>
+                <div class="form-group mb-4 text-center">
+                    <input type="submit" value="Importar Datos Esenciales" class="btn btn-success btn-lg" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <a asp-action="Index" class="btn btn-secondary btn-lg">
+            <i class="fas fa-arrow-left"></i> Volver al Listado
+        </a>
+    </div>
+</div>
+
+<!-- Validación de archivo en el cliente -->
+<script>
+    document.getElementById("excelEsencial").addEventListener("change", function () {
+        const file = this.files[0];
+        if (file && !file.name.endsWith(".xlsx") && !file.name.endsWith(".xls")) {
+            alert("El archivo seleccionado debe ser un archivo Excel (.xlsx o .xls).");
+            this.value = ""; // Limpiar el input si el archivo no es válido
+        }
+    });
+</script>

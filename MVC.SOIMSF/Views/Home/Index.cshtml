@@ -1,0 +1,206 @@
+﻿@{
+    ViewData["Title"] = "SOIMSF - Home Page";
+}
+
+<div class="text-center">
+    <img src="/Fotografias/SOIMSF.png" alt="SOIMSF Logo" style="height: 150px; width: auto;">
+
+    <p class="lead" style="font-size: 1.25rem; color: #34495e;">
+        Bienvenido al sistema de gestión integral del <strong>SINDICATO OBRERO DE LA INDUSTRIA MADERERA SAN FRANCISCO</strong>.
+    </p>
+
+    <p style="color: #7f8c8d;">
+        Este sistema permite a los afiliados gestionar sus datos, a las empresas gestionar sus prácticas asistenciales y a los administradores supervisar todo el funcionamiento.
+    </p>
+
+    <hr class="my-4" style="border-top: 2px solid #A0522D;">
+    <div class="row mb-5">
+        <div class="col-md-4">
+            <h3 style="color: #27ae60;"><strong>Gestión de Afiliados</strong></h3>
+            <p style="font-size: 1.1rem;">Gestiona y actualiza los datos de los <strong>afiliados</strong>, supervisa sus estados y asegura que la información esté siempre al día.</p>
+            <a asp-area="" asp-controller="Afiliados" asp-action="Index" class="btn btn-success btn-lg" style="background-color: #2ecc71; border: none;">
+                <i class="fas fa-users"></i> Ir a Gestión de Afiliados
+            </a>
+        </div>
+        <div class="col-md-4">
+            <h3 style="color: #2980b9;"><strong>Prácticas Asistenciales</strong></h3>
+            <p style="font-size: 1.1rem;">Administra y gestiona las <strong>prácticas asistenciales</strong> ofrecidas, define prioridades, fechas y controla el estado de las mismas.</p>
+            <a asp-area="" asp-controller="PracticasAsistenciales" asp-action="Index" class="btn btn-primary btn-lg" style="background-color: #3498db; border: none;">
+                <i class="fas fa-stethoscope"></i> Ir a Prácticas Asistenciales
+            </a>
+        </div>
+        <div class="col-md-4">
+            <h3 style="color: #16a085;"><strong>Gestión de Empresas</strong></h3>
+            <p style="font-size: 1.1rem;">Visualiza la información clave de las <strong>empresas</strong>, incluyendo su estado, contacto y actividad.</p>
+            <a asp-area="" asp-controller="Empresas" asp-action="Index" class="btn btn-info btn-lg" style="background-color: #1abc9c; border: none;">
+                <i class="fas fa-industry"></i> Ir a Gestión de Empresas
+            </a>
+        </div>
+    </div>
+
+    <hr class="my-4" style="border-top: 2px solid #A0522D;">
+
+    <div class="card my-4">
+        <div class="card-header bg-primary text-white text-center">
+            <h3>Explicación de Permisos</h3>
+        </div>
+        <div class="card-body">
+            <h4 class="text-secondary text-center mb-4">Conoce el alcance de cada tipo de permiso</h4>
+            <div class="d-flex flex-column align-items-center">
+                <div class="p-3 bg-light border rounded w-75 mb-3">
+                    <strong>CRUDIE:</strong> Permite
+                    <span class="text-success">Crear</span>,
+                    <span class="text-primary">Leer</span>,
+                    <span class="text-warning">Actualizar</span>,
+                    <span class="text-danger">Eliminar</span>, además de
+                    <span class="text-info">Importar</span> y
+                    <span class="text-info">Exportar</span>.
+                </div>
+                <div class="p-3 bg-light border rounded w-75 mb-3">
+                    <strong>CRUDE:</strong> Permite
+                    <span class="text-success">Crear</span>,
+                    <span class="text-primary">Leer</span>,
+                    <span class="text-warning">Actualizar</span>,
+                    <span class="text-danger">Eliminar</span>, además de
+                    <span class="text-info">Exportar</span>.
+                </div>
+                <div class="p-3 bg-light border rounded w-75 mb-3">
+                    <strong>CRUD:</strong> Permite
+                    <span class="text-success">Crear</span>,
+                    <span class="text-primary">Leer</span>,
+                    <span class="text-warning">Actualizar</span> y
+                    <span class="text-danger">Eliminar</span>.
+                </div>
+                <div class="p-3 bg-light border rounded w-75 mb-3">
+                    <strong>RUE:</strong> Permite
+                    <span class="text-primary">Leer</span>
+                    <span class="text-warning">Actualizar</span> y
+                    <span class="text-info">Exportar</span>.
+                </div>
+                <div class="p-3 bg-light border rounded w-75 mb-3">
+                    <strong>RU:</strong> Permite
+                    <span class="text-primary">Leer</span> y
+                    <span class="text-warning">Actualizar</span>.
+                </div>
+                <div class="p-3 bg-light border rounded w-75 mb-3">
+                    <strong>R:</strong> Permite
+                    <span class="text-primary">Leer</span>.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card my-4">
+        <div class="card-header bg-primary text-white text-center  mb-4">
+            <h3>Seguridad con Roles</h3>
+        </div>
+        <h4 class="text-secondary text-center  mb-4">Cada usuario/rol puede realizar las siguientes actividades:</h4>
+        <table class="table table-bordered">
+            <thead class="thead-dark" style="border: 10px;">
+                <tr>
+                    <th>Entidad</th>
+                    <th>Administrador</th>
+                    <th>Manager</th>
+                    <th>Solo Lectura</th>
+                    <th>Acceso Directo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Afiliados</td>
+                    <td>CRUDIE</td>
+                    <td>RUE</td>
+                    <td>R</td>
+                    <td><a href="/Afiliados" class="btn btn-outline-primary"><i class="fas fa-users"></i> Ir</a></td>
+                </tr>
+                <tr>
+                    <td>Estados de Afiliados</td>
+                    <td>CRUD</td>
+                    <td>RU</td>
+                    <td>R</td>
+                    <td><a href="/EstadosDeAfiliados" class="btn btn-outline-primary"><i class="fas fa-user-check"></i> Ir</a></td>
+                </tr>
+                <tr>
+                    <td>Situaciones de Revista</td>
+                    <td>CRUD</td>
+                    <td>RU</td>
+                    <td>R</td>
+                    <td><a href="/SituacionesDeRevista" class="btn btn-outline-primary"><i class="fas fa-briefcase"></i> Ir</a></td>
+                </tr>
+                <tr>
+                    <td>Prácticas Asistenciales</td>
+                    <td>CRUDE</td>
+                    <td>RUE</td>
+                    <td>R</td>
+                    <td><a href="/PracticasAsistenciales" class="btn btn-outline-primary"><i class="fas fa-stethoscope"></i> Ir</a></td>
+                </tr>
+                <tr>
+                    <td>Estados de Prácticas</td>
+                    <td>CRUD</td>
+                    <td>RU</td>
+                    <td>R</td>
+                    <td><a href="/EstadosDePracticas" class="btn btn-outline-primary"><i class="fas fa-notes-medical"></i> Ir</a></td>
+                </tr>
+                <tr>
+                    <td>Tipos de Prácticas</td>
+                    <td>CRUD</td>
+                    <td>RU</td>
+                    <td>R</td>
+                    <td><a href="/TiposDePracticas" class="btn btn-outline-primary"><i class="fas fa-procedures"></i> Ir</a></td>
+                </tr>
+                <tr>
+                    <td>Tipos de Beneficiarios</td>
+                    <td>CRUD</td>
+                    <td>RU</td>
+                    <td>R</td>
+                    <td><a href="/TiposDeBeneficiarios" class="btn btn-outline-primary"><i class="fas fa-user-friends"></i> Ir</a></td>
+                </tr>
+                <tr>
+                    <td>Empresas</td>
+                    <td>CRUDIE</td>
+                    <td>RUE</td>
+                    <td>R</td>
+                    <td><a href="/Empresas" class="btn btn-outline-primary"><i class="fas fa-industry"></i> Ir</a></td>
+                </tr>
+                <tr>
+                    <td>Localidades</td>
+                    <td>CRUD</td>
+                    <td>RU</td>
+                    <td>R</td>
+                    <td><a href="/Localidades" class="btn btn-outline-primary"><i class="fas fa-map-marked-alt"></i> Ir</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <hr class="my-4" style="border-top: 2px solid #A0522D;">
+
+
+    <div>
+        <h2 class="font-weight-bold" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #2c3e50;">
+            <i class="fas fa-graduation-cap"></i> Práctica Supervisada - UTN San Francisco
+        </h2>
+        <p class="lead" style="font-size: 1.2rem; color: #34495e;">
+            Este proyecto tiene como objetivo desarrollar una aplicación web para el Sindicato de la Madera,
+            que permita gestionar de manera eficiente y segura las prácticas médicas y la administración de afiliados.
+        </p>
+
+        <h3 class="mt-4" style="color: #16a085;">
+            <i class="fas fa-bullseye"></i>
+            Objetivos Principales
+        </h3>
+        <ul style="text-align: left; max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #7f8c8d;">
+            <li><strong>Desarrollo de una aplicación web en ASP.NET Core MVC</strong> con autenticación y autorización.</li>
+            <li><strong>Gestión segura</strong> de registros y control de prácticas médicas y afiliados.</li>
+            <li><strong>Implementación de una API REST</strong> para CRUD de afiliados, empresas y prácticas.</li>
+            <li><strong>Exportación/Importación</strong> de datos en formato Excel.</li>
+            <li><strong>Control de acceso</strong> mediante roles y permisos.</li>
+            <li><strong>Pruebas funcionales</strong> y documentación completa del sistema.</li>
+        </ul>
+        <br />
+        <p style="color: #34495e;">
+            Este proyecto es parte de la <strong>Práctica Supervisada</strong> de la Tecnicatura Universitaria en Programación de la UTN,
+            cumpliendo con los requerimientos establecidos para la acreditación de 60 horas.
+        </p>
+    </div>
+</div>

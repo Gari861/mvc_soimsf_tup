@@ -1,0 +1,251 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MVC.SOIMSF
+build_property.RootNamespace = MVC.SOIMSF
+build_property.ProjectDir = C:\Users\User\Desktop\mvc\mvc_soimsf\MVC.SOIMSF\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\User\Desktop\mvc\mvc_soimsf\MVC.SOIMSF
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Afiliados/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWZpbGlhZG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Afiliados/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWZpbGlhZG9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Afiliados/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWZpbGlhZG9zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Afiliados/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWZpbGlhZG9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Afiliados/Import.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWZpbGlhZG9zXEltcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Afiliados/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWZpbGlhZG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Authentication/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cQWNjZXNzRGVuaWVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Authentication/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Empresas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Empresas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Empresas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Empresas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Empresas/Import.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcSW1wb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Empresas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/EstadosDeAfiliados/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc0RlQWZpbGlhZG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/EstadosDeAfiliados/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc0RlQWZpbGlhZG9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/EstadosDeAfiliados/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc0RlQWZpbGlhZG9zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/EstadosDeAfiliados/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc0RlQWZpbGlhZG9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/EstadosDeAfiliados/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc0RlQWZpbGlhZG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/EstadosDePracticas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc0RlUHJhY3RpY2FzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/EstadosDePracticas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc0RlUHJhY3RpY2FzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/EstadosDePracticas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc0RlUHJhY3RpY2FzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/EstadosDePracticas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc0RlUHJhY3RpY2FzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/EstadosDePracticas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc0RlUHJhY3RpY2FzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Localidades/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYWxpZGFkZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Localidades/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYWxpZGFkZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Localidades/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYWxpZGFkZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Localidades/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYWxpZGFkZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Localidades/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYWxpZGFkZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/PracticasAsistenciales/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJhY3RpY2FzQXNpc3RlbmNpYWxlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/PracticasAsistenciales/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJhY3RpY2FzQXNpc3RlbmNpYWxlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/PracticasAsistenciales/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJhY3RpY2FzQXNpc3RlbmNpYWxlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/PracticasAsistenciales/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJhY3RpY2FzQXNpc3RlbmNpYWxlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/PracticasAsistenciales/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJhY3RpY2FzQXNpc3RlbmNpYWxlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/SituacionesDeRevista/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2l0dWFjaW9uZXNEZVJldmlzdGFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/SituacionesDeRevista/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2l0dWFjaW9uZXNEZVJldmlzdGFcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/SituacionesDeRevista/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2l0dWFjaW9uZXNEZVJldmlzdGFcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/SituacionesDeRevista/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2l0dWFjaW9uZXNEZVJldmlzdGFcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/SituacionesDeRevista/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2l0dWFjaW9uZXNEZVJldmlzdGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/TiposDeBeneficiarios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NEZUJlbmVmaWNpYXJpb3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/TiposDeBeneficiarios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NEZUJlbmVmaWNpYXJpb3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/TiposDeBeneficiarios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NEZUJlbmVmaWNpYXJpb3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/TiposDeBeneficiarios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NEZUJlbmVmaWNpYXJpb3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/TiposDeBeneficiarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NEZUJlbmVmaWNpYXJpb3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/TiposDePracticas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NEZVByYWN0aWNhc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/TiposDePracticas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NEZVByYWN0aWNhc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/TiposDePracticas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NEZVByYWN0aWNhc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/TiposDePracticas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NEZVByYWN0aWNhc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/TiposDePracticas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NEZVByYWN0aWNhc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/mvc/mvc_soimsf/MVC.SOIMSF/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-mspkmfsk26

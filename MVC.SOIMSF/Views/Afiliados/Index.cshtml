@@ -1,0 +1,238 @@
+﻿@model IEnumerable<MVC.SOIMSF.Models.AfiliadosViewModel>
+
+@{
+    ViewData["Title"] = "Afiliados";
+}
+<div class="container mt-4">
+    @if (TempData["AlertMessage"] != null)
+    {
+        <div class="alert alert-@TempData["AlertType"] alert-dismissible fade show" role="alert">
+            @TempData["AlertMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success text-center" role="alert">
+            @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+
+    <h1 class="text-center mb-4" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        <i class="fas fa-users"></i> GESTIÓN DE AFILIADOS
+    </h1>
+    <p class="text-center mb-4" style="font-size: 1.1rem; color: #555;">
+        Administra los datos de <strong>afiliados</strong>, gestiona sus estados y asegura información precisa.
+    </p>
+
+    <h5 class="text-center mb-3 mt-4 text-secondary">GESTIÓN RELACIONADA</h5>
+    <div class="row g-3 text-center">
+        <div class="col-md-4">
+            <a asp-area="" asp-controller="EstadosDeAfiliados" asp-action="Index" class="btn btn-sm btn-success w-100" style="background-color: #2ecc71;">
+                <i class="fas fa-user-check"></i> Estados de Afiliados
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a asp-area="" asp-controller="SituacionesDeRevista" asp-action="Index" class="btn btn-sm btn-primary w-100" style="background-color: #3498db;">
+                <i class="fas fa-briefcase"></i> Situaciones de Revista
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a asp-area="" asp-controller="Empresas" asp-action="Index" class="btn btn-sm btn-warning w-100" style="background-color: #e67e22;">
+                <i class="fas fa-industry"></i> Empresas
+            </a>
+        </div>
+    </div>
+
+    <h5 class="text-center mb-3 mt-4 text-secondary">ACCIONES DISPONIBLES</h5>
+    @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
+    {
+        <div class="text-center row g-3">
+            <div class="col-md-3">
+
+                @if (User.IsInRole("Admin"))
+                {
+                    <a asp-action="Create" class="btn btn-success btn-lg mb-3" style="background-color: #2ecc71; border: none;">
+                        <i class="fas fa-plus"></i> Ingresar Nuevo Afiliado
+                    </a>
+                }
+            </div>
+            <div class="col-md-3">
+                @if (User.IsInRole("Admin"))
+                {
+                    <a asp-action="Import" class="btn btn-info btn-lg mb-3" style="border: none;">
+                        <i class="fas fa-file-import"></i> Importar Excel de Afiliados
+                    </a>
+                }
+            </div>
+
+            <div class="col-md-3">
+                @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
+                {
+                    <a class="btn btn-primary btn-lg mb-3" asp-action="ExportarAfiliados" style="border: none;">
+                        <i class="fas fa-file-excel"></i> Exportar Excel de Afiliados
+                    </a>
+                }
+            </div>
+            <div class="col-md-3">
+                @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
+                {
+                    <a asp-action="ExportarAfiliadosPDF" class="btn btn-danger btn-lg mb-3" style="border: none;">
+                        <i class="fas fa-file-pdf"></i> Exportar PDF de Afiliados
+                    </a>
+                }
+            </div>
+        </div>
+    }
+
+    <h5 class="text-center mb-3 mt-4 text-secondary">FILTROS DE BÚSQUEDA</h5>
+    <form asp-action="Index" method="get" class="mb-4">
+        <div class="row g-3">
+            <div class="col-md-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" value="@Context.Request.Query["nombre"]" />
+            </div>
+            <div class="col-md-3">
+                <label for="discapacidad" class="form-label">Discapacidad</label>
+                <select class="form-select" id="discapacidad" name="discapacidad">
+                    <option value="">Cualquiera</option>
+                    <option value="true" selected="@(Context.Request.Query["discapacidad"] == "true")">Sí</option>
+                    <option value="false" selected="@(Context.Request.Query["discapacidad"] == "false")">No</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="idEmpresa" class="form-label">Empresa</label>
+                <select class="form-select" id="idEmpresa" name="idEmpresa" asp-items="@(new SelectList(ViewBag.Empresas, "Key", "Value", Context.Request.Query["idEmpresa"]))">
+                    <option value="">Cualquiera</option>
+                </select>
+            </div>
+            <div class="col-md-3 align-self-end">
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="fas fa-search"></i> Buscar
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <h5 class="mt-3 mb-3 text-secondary text-center">LISTADO DE AFILIADOS</h5>
+    @if (Model != null && Model.Any())
+    {
+        <div class="table-responsive">
+
+            <table class="table table-hover table-bordered table-striped text-center align-middle">
+                <thead class="thead-dark">
+                    <tr style="border: 1.3px solid black;">
+                        @* <th>Id</th> *@
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Cuil</th>
+                        <th>Teléfono</th>
+                        @*                         <th>Email</th>
+                    <th>Fecha Nacimiento</th>
+                    <th>Dirección</th> *@
+                        <th>Discapacidad</th>
+                        <th>Estado del Afiliado</th>
+                        <th>Situación de Revista</th>
+                        <th>Empresa</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr style="border: 1px solid #ccc;">
+                            @* <td>@item.Id</td> *@
+                            <td>@item.Nombre</td>
+                            <td>@item.Apellido</td>
+                            <td>@item.Cuil</td>
+                            <td>@item.Telefono</td>
+                            @*                             <td>@item.Email</td>
+                    <td>@item.FechaNacimiento</td>
+                    <td>@item.Direccion</td> *@
+                            <td>
+                                @{
+                                    var discapacidad = item.Discapacidad;
+                                    if (discapacidad.HasValue)
+                                    {
+                                        @((bool)discapacidad ? "Sí" : "No")
+                                    }
+                                    else
+                                    {
+                                        @:
+                                    }
+                                }
+                            </td>
+                            <td>
+                                @(item.IdEstadoAfiliado.HasValue && ViewBag.EstadosDeAfiliados.ContainsKey(item.IdEstadoAfiliado.Value)
+                                    ? ViewBag.EstadosDeAfiliados[item.IdEstadoAfiliado.Value]
+                                    : "")
+                            </td>
+                            <td>
+                                @(item.IdSituacionDeRevista.HasValue && ViewBag.SituacionesDeRevista.ContainsKey(item.IdSituacionDeRevista.Value)
+                                    ? ViewBag.SituacionesDeRevista[item.IdSituacionDeRevista.Value]
+                                    : "")
+                            </td>
+                            <td>
+                                @(item.IdEmpresa.HasValue && ViewBag.Empresas.ContainsKey(item.IdEmpresa.Value)
+                                    ? ViewBag.Empresas[item.IdEmpresa.Value]
+                                    : "")
+                            </td>
+                            <td>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm me-2">
+                                        <i class="fas fa-info-circle"></i> Detalles
+                                    </a>
+                                }
+
+                                @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
+                                {
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm me-2">
+                                        <i class="fas fa-edit"></i> Editar
+                                    </a>
+                                }
+
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i> Eliminar
+                                    </a>
+                                }
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="text-center mt-5">
+            <p class="display-7 text-danger fw-bold">
+                <i class="fas fa-exclamation-circle"></i>
+                No se encontraron afiliados para mostrar.
+            </p>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        setTimeout(() => {
+            const alert = document.querySelector('.alert');
+            if (alert) {
+                alert.classList.remove('show');
+                alert.classList.add('fade');
+                setTimeout(() => alert.remove(), 500); // Tiempo para la animación
+            }
+        }, 4000); // 5 segundos
+    </script>
+}

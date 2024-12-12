@@ -1,0 +1,63 @@
+﻿@model MVC.SOIMSF.Models.PracticasAsistencialesViewModel
+
+@{
+    ViewData["Title"] = "Editar Práctica Asistencial";
+}
+
+<h1>Editar Práctica Asistencial</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="IdTipo" class="control-label">Tipo de Práctica</label>
+        <select asp-for="IdTipo" class="form-control" asp-items="ViewBag.IdTipoDePractica"></select>
+        <span asp-validation-for="IdTipo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IdAfiliado" class="control-label">Afiliado</label>
+        <select asp-for="IdAfiliado" class="form-control" asp-items="ViewBag.IdAfiliado"></select>
+        <span asp-validation-for="IdAfiliado" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IdTipoDeBeneficiario" class="control-label">Tipo de Beneficiario</label>
+        <select asp-for="IdTipoDeBeneficiario" class="form-control" asp-items="ViewBag.IdTipoDeBeneficiario"></select>
+        <span asp-validation-for="IdTipoDeBeneficiario" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IdEstadoDePractica" class="control-label">Estado de la Práctica</label>
+        <select asp-for="IdEstadoDePractica" class="form-control" asp-items="ViewBag.IdEstadoPractica"></select>
+        <span asp-validation-for="IdEstadoDePractica" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Precio" class="control-label">Precio</label>
+        <input asp-for="Precio" class="form-control" type="number" step="0.01" />
+        <span asp-validation-for="Precio" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Fecha" class="control-label">Fecha</label>
+        <input asp-for="Fecha" class="form-control" type="date" />
+        <span asp-validation-for="Fecha" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Observacion" class="control-label">Observación</label>
+        <textarea asp-for="Observacion" class="form-control" rows="4"></textarea>
+        <span asp-validation-for="Observacion" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </div>
+</form>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate-unobtrusive/3.2.13/jquery.validate.unobtrusive.min.js"></script>
+}

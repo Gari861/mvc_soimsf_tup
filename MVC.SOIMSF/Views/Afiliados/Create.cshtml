@@ -1,0 +1,101 @@
+﻿@model MVC.SOIMSF.Models.AfiliadosViewModel
+
+@{
+    ViewData["Title"] = "Crear Afiliado";
+}
+
+<h1>Crear Afiliado</h1>
+
+<form asp-action="Create">
+    <p class ="text-muted">Los campos marcados con <span class="text-danger">*</span> son obligatorios.</p>
+
+    <div class="form-group">
+        <label asp-for="Nombre" class="control-label"></label><span class="text-danger">*</span>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Apellido" class="control-label"></label><span class="text-danger">*</span>
+        <input asp-for="Apellido" class="form-control" />
+        <span asp-validation-for="Apellido" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Cuil" class="control-label"></label><span class="text-danger">*</span>
+        <input asp-for="Cuil" class="form-control" />
+        <span asp-validation-for="Cuil" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Telefono" class="control-label"></label>
+        <input asp-for="Telefono" class="form-control" />
+        <span asp-validation-for="Telefono" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Direccion" class="control-label"></label>
+        <input asp-for="Direccion" class="form-control" />
+        <span asp-validation-for="Direccion" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FechaNacimiento" class="control-label"></label>
+        <input asp-for="FechaNacimiento" class="form-control" type="date" />
+        <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>¿Tiene Discapacidad?</label>
+        <div class="form-check">
+            <input id="DiscapacidadSi"
+                   name="Discapacidad"
+                   class="form-check-input"
+                   type="radio"
+                   value="true"
+            @(Model?.Discapacidad == true ? "checked" : "") />
+            <label for="DiscapacidadSi" class="form-check-label">Sí</label>
+        </div>
+        <div class="form-check">
+            <input id="DiscapacidadNo"
+                   name="Discapacidad"
+                   class="form-check-input"
+                   type="radio"
+                   value="false"
+            @(Model?.Discapacidad == false ? "checked" : "") />
+            <label for="DiscapacidadNo" class="form-check-label">No</label>
+        </div>
+        <span asp-validation-for="Discapacidad" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IdEstadoAfiliado" class="control-label"></label>
+        <select asp-for="IdEstadoAfiliado" class="form-control" asp-items="ViewBag.IdEstadoAfiliado"></select>
+        <span asp-validation-for="IdEstadoAfiliado" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IdSituacionDeRevista" class="control-label"></label>
+        <select asp-for="IdSituacionDeRevista" class="form-control" asp-items="ViewBag.IdSituacionDeRevista"></select>
+        <span asp-validation-for="IdSituacionDeRevista" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IdEmpresa" class="control-label"></label>
+        <select asp-for="IdEmpresa" class="form-control" asp-items="ViewBag.IdEmpresa"></select>
+        <span asp-validation-for="IdEmpresa" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-success">Crear</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </div>
+</form>
+
+

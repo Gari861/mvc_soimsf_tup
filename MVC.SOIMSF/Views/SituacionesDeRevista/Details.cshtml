@@ -1,0 +1,24 @@
+﻿@model MVC.SOIMSF.Models.SituacionesDeRevistaViewModel
+
+@{
+    ViewData["Title"] = "Detalles de la Situación de Revista";
+}
+
+<h1>Detalles de la Situación de Revista</h1>
+
+<div>
+    <h4>SituacionesDeRevistaViewModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Id</dt>
+        <dd class="col-sm-10">@Model.Id</dd>
+
+        <dt class="col-sm-2">Nombre</dt>
+        <dd class="col-sm-10">@Model.Nombre</dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary">Volver a la Lista</a>
+</div>

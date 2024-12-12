@@ -1,0 +1,126 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* Estilos personalizados para el sindicato  */
+
+.navbar-custom {
+    background-color: #28a745;
+}
+
+    .navbar-custom .nav-link {
+        color: white;
+        font-size: 0.8rem;
+        padding: 0.45rem 0.75rem;
+    }
+
+        .navbar-custom .nav-link:hover, .navbar-custom .nav-highlight:hover, #navbar-brand :hover {
+            color: #00ff0a;
+        }
+
+.nav-highlight {
+    font-weight: bold;
+    color: #f5ff00 !important;
+}
+
+.footer-bg {
+    background-color: #f1f1f1;
+    color: #28a745;
+}
+
+.main-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+    color: white;
+}
+
+.navbar-nav .nav-link i {
+    margin-right: 0.2rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que quede encima del contenido */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+body {
+    padding-top: 70px; /* Ajusta según la altura real del header */
+    padding-bottom: 50px; /* Ajusta según la altura real del footer */
+}
+.navbar-custom {
+    background-color: #A0522D; /* Marrón Claro */
+}
+
+    .navbar-custom .navbar-brand, .navbar-custom .nav-link {
+        color: #FFF;
+    }
+
+.footer-custom {
+    background-color: #A0522D; /* Marrón Claro */
+    color: #FFF;
+}
+
+    .footer-custom a {
+        color: #FFD700; /* Dorado */
+    }
+
+.nav-link .fa {
+    margin-right: 5px;
+}
+
+/* muesra  el menú en pantallas pequeñas */
+@media (max-width: 1200px) {
+    footer {
+        font-size: xx-small; /* Reduce el tamaño de fuente */
+    }
+
+        footer img, footer a{
+            display: none;
+        }
+
+    table thead, table tbody, table th, table td, table tr, table td a {
+        font-size: xx-small;
+        padding: 0px;
+    }
+
+    .navbar-toggler {
+        display: block; /* Muestra el botón hamburguesa */
+    }
+}
+
+/* Siempre muestra el menú en pantallas grandes */
+@media (min-width: 1300px) {
+    .navbar-collapse {
+        display: flex !important; /* Asegura que el menú se mantenga visible */
+    }
+}
+
+

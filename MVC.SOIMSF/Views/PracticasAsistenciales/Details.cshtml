@@ -1,0 +1,42 @@
+﻿@model MVC.SOIMSF.Models.PracticasAsistencialesViewModel
+
+@{
+    ViewData["Title"] = "Detalles de la Práctica Asistencial";
+}
+
+<h1>Detalles de la Práctica Asistencial</h1>
+
+<div>
+    <h4>Práctica Asistencial</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Id</dt>
+        <dd class="col-sm-10">@Model.Id</dd>
+
+        <dt class="col-sm-2">Tipo de Práctica</dt>
+        <dd class="col-sm-10">@ViewBag.IdTipoDePractica</dd>
+
+        <dt class="col-sm-2">Afiliado</dt>
+        <dd class="col-sm-10">@ViewBag.IdAfiliado</dd>
+
+        <dt class="col-sm-2">Tipo de Beneficiario</dt>
+        <dd class="col-sm-10">@ViewBag.IdTipoDeBeneficiario</dd>
+
+        <dt class="col-sm-2">Estado de la Práctica</dt>
+        <dd class="col-sm-10">@ViewBag.IdEstadoPractica</dd>
+
+        <dt class="col-sm-2">Precio</dt>
+        <dd class="col-sm-10">@Model.Precio.ToString("C")</dd>
+
+        <dt class="col-sm-2">Fecha</dt>
+        <dd class="col-sm-10">@Model.Fecha.ToString("yyyy-MM-dd")</dd>
+
+        <dt class="col-sm-2">Observación</dt>
+        <dd class="col-sm-10">@Model.Observacion</dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary">Volver a la Lista</a>
+</div>
